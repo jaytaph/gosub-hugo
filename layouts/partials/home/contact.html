@@ -1,0 +1,31 @@
+<section id="contact">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Contact us</h2>
+                <p class="lead">
+                    The best way to get into contact with us is through our Zulip chat. We are always available to answer your questions and to help you with any problems you might have. We are also available on Github, so you can create an issue or a pull request if you have any suggestions or improvements.
+                </p>
+                <p class="lead">
+                    You can also drop us an email at <span style="color: var(--text); font-weight: 700;">{{ .Site.Params.contactEmail | default "info@gosub.io" }}</span>.
+                </p>
+            </div>
+
+            <div style="display:flex; gap: 10px; flex-wrap: wrap;">
+                <a class="btn primary" href="{{ .Site.Params.zulipUrl | default "https://chat.developer.gosub.io" }}" target="_blank" rel="noreferrer">Zulip</a>
+                <a class="btn" href="{{ .Site.Params.issuesUrl | default "https://github.com/gosub-io/gosub-engine/issues" }}" target="_blank" rel="noreferrer">Open an issue</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-radius: var(--r-lg); display:flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; align-items:center;">
+            <div>
+                <div class="pill"><b>Quick links</b></div>
+                <div style="margin-top: 10px; color: var(--muted); display:flex; gap: 14px; flex-wrap: wrap;">
+                    <a class="btn" href="{{ .Site.Params.chatUrl | default "https://chat.gosub.io" }}" target="_blank" rel="noreferrer">chat.gosub.io</a>
+                    <a class="btn" href="{{ .Site.Params.githubOrgUrl | default "https://github.com/gosub-io/" }}" target="_blank" rel="noreferrer">github.com</a>
+                    <a class="btn" href="{{ .Site.Params.zulipUrl | default "https://chat.developer.gosub.io" }}" target="_blank" rel="noreferrer">developer zulip</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

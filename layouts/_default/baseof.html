@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>
+        {{- if .IsHome -}}
+        {{ .Site.Title }}
+        {{- else -}}
+        {{ .Title }} — {{ .Site.Title }}
+        {{- end -}}
+    </title>
+
+    {{ with .Description }}<meta name="description" content="{{ . }}" />{{ end }}
+
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    {{ with .Description }}<meta property="og:description" content="{{ . }}" />{{ end }}
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    {{ partial "css.html" . }}
+</head>
+
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+{{ partial "header.html" . }}
+
+<main id="content">
+    {{ block "main" . }}{{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+{{ partial "theme-toggle.html" . }}
+</body>
+</html>

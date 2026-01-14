@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div class="page">
+    <div class="container article">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> Blog</div>
+        <h1>{{ .Title | default "Blog" }}</h1>
+        {{ with .Params.subtitle }}<p class="subhead">{{ . }}</p>{{ end }}
+    </div>
+</div>
+
+<div class="container article" style="padding-bottom: 34px;">
+    <div class="layout" style="grid-template-columns: 1fr;">
+        <article>
+            <div class="article-inner">
+                <div class="prose">
+                    {{ with .Content }}{{ . }}{{ end }}
+
+                    <div class="hr"></div>
+
+                    {{ range .Pages.ByDate.Reverse }}
+                    <div style="padding: 14px 0;">
+                        <div class="pill"><b>{{ .Date.Format "2006-01-02" }}</b></div>
+                        <h2 style="margin: 10px 0 6px;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                        {{ with .Params.subtitle }}<p class="subhead" style="margin:0;">{{ . }}</p>{{ end }}
+                    </div>
+                    <div class="hr"></div>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}

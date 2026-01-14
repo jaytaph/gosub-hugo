@@ -1,0 +1,63 @@
+<section id="status">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Current status of the project</h2>
+                <p class="lead">
+                    The project is still in its early stages. We are working on the core components of the engine like the CSS system, rendering pipeline and JS integration. We are also working on the architecture of the engine to make it as modular as possible.
+                </p>
+            </div>
+
+            <a class="btn" href="{{ .Site.Params.statusUrl | default "/status/" | relURL }}">Read more</a>
+        </div>
+
+        <div class="status-grid">
+            <div class="card">
+                <div class="pill"><b>HTML parser</b> — Almost all HTML5 documents are parsed correctly</div>
+                <div class="kv">
+                    <div>Tests</div><div>Passing almost all tests from the html5lib test suite</div>
+                    <div>Improvements</div><div>Optimization and better handling of invalid HTML and removing as much as copying as possible.</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill"><b>Bytestream</b> — Proof of concept phase</div>
+                <div class="kv">
+                    <div>Tests</div><div>N/A</div>
+                    <div>Improvements</div><div>Encoding detection and less copying</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill"><b>CSS3 parser</b> — Proof of concept phase</div>
+                <div class="kv">
+                    <div>Tests</div><div>Parses many realworld CSS correctly</div>
+                    <div>Improvements</div><div>Less copying, speedups</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill"><b>Render pipeline</b> — Proof of concept phase</div>
+                <div class="kv">
+                    <div>Tests</div><div>None</div>
+                    <div>Improvements</div><div>Many</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill"><b>Javascript engine</b> — Initial implementation</div>
+                <div class="kv">
+                    <div>Tests</div><div>None</div>
+                    <div>Improvements</div><div>Many</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pill"><b>And much more…</b></div>
+                <p class="lead" style="margin-top: 10px;">
+                    Of course there are many different other things that we are working on. For instance, we are working on the networking stack, configuration systems to allow to configure the engine, and we are working on the architecture of the engine to make it as modular as possible.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

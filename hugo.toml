@@ -1,0 +1,21 @@
+baseURL = "https://gosub.io/hugo/"
+languageCode = "en"
+title = "Gosub"
+
+[params]
+tagline = "Modular browser engine"
+kicker = "A new engine, built for diversity"
+heroSubtitle = "A customizable browser engine built for the modern web."
+
+chatUrl = "https://chat.gosub.io"
+zulipUrl = "https://chat.developer.gosub.io"
+githubUrl = "https://github.com/gosub-io/gosub-engine"
+copyrightOwner = "The Gosub community"
+githubOrgUrl = "https://github.com/gosub-io/"
+issuesUrl = "https://github.com/gosub-io/gosub-engine/issues"
+statusUrl = "/status/"
+contactEmail = "info@gosub.io"
+
+# If you want a default fixed theme:
+# theme = "dark"   # or "light"
+# Otherwise it follows system + toggle stores preference

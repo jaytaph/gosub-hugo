@@ -1,0 +1,17 @@
+<footer>
+    <div class="container article">
+        <div class="foot">
+            <div>
+                <div>Copyright (C) 2023-{{ now.Year }} — {{ .Site.Params.copyrightOwner | default "The Gosub community" }}</div>
+                <div style="margin-top: 8px;">
+                    Spotted an issue? Send a PR at
+                    <a href="{{ .Site.Params.githubUrl | default "https://github.com/gosub-io/gosub-engine" }}" target="_blank" rel="noreferrer" style="text-decoration: underline; text-underline-offset: 3px;">our github repository</a>.
+                </div>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                <a class="btn" href="#content">Back to top</a>
+            </div>
+        </div>
+    </div>
+</footer>

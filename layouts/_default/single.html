@@ -1,0 +1,53 @@
+{{ define "main" }}
+<div class="page">
+    <div class="container blog">
+        <div class="breadcrumbs">
+            <a href="{{ "" | relURL }}">Home</a>
+            <span>›</span>
+            <a href="{{ "blog/" | relURL }}">Blog</a>
+            <span>›</span>
+            <span>{{ .Title }}</span>
+        </div>
+
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> {{ .Params.kicker | default "Project updates" }}</div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="subhead">{{ . }}</p>{{ end }}
+
+        <div class="meta">
+            <span class="pill"><b>Author</b> {{ .Params.author | default "Gosub team" }}</span>
+            {{ with .Params.topic }}<span class="pill"><b>Topic</b> {{ . }}</span>{{ end }}
+            {{ with .Params.status }}<span class="pill"><b>Status</b> {{ . }}</span>{{ end }}
+            <span class="pill"><b>Date</b> {{ .Date.Format "2006-01-02" }}</span>
+        </div>
+    </div>
+</div>
+
+<div class="container blog">
+    <div class="layout">
+        <article id="article">
+            <div class="article-inner">
+                <div class="prose">
+                    {{ .Content }}
+                </div>
+            </div>
+        </article>
+
+        <aside aria-label="On this page">
+            <div class="side-title">On this page</div>
+
+            <nav class="toc">
+                {{ .TableOfContents }}
+            </nav>
+
+            <div class="side-actions">
+                {{ with .Params.cta_primary_url }}
+                <a class="btn primary" href="{{ . }}" target="_blank" rel="noreferrer">{{ $.Params.cta_primary_label | default "Primary link" }}</a>
+                {{ end }}
+                {{ with .Params.cta_secondary_url }}
+                <a class="btn" href="{{ . }}" target="_blank" rel="noreferrer">{{ $.Params.cta_secondary_label | default "Secondary link" }}</a>
+                {{ end }}
+            </div>
+        </aside>
+    </div>
+</div>
+{{ end }}

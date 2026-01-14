@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="page">
+    <div class="container">
+        <div class="kicker"><span class="dot" aria-hidden="true"></span> {{ .Site.Params.kicker | default "A new engine, built for diversity" }}</div>
+        <h1>{{ .Site.Title }}</h1>
+        <p class="subhead">{{ .Site.Params.heroSubtitle | default "A customizable browser engine built for the modern web." }}</p>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top: 16px;">
+            <a class="btn primary" href="{{ "blog/" | relURL }}">Read the blog</a>
+            <a class="btn" href="{{ .Site.Params.githubUrl | default "https://github.com/gosub-io/gosub-engine" }}" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <div class="hr" style="margin-top: 22px;"></div>
+
+        <div class="prose">
+            <p class="muted">
+                This is a minimal homepage so your site works immediately. Next, we can port the full gosub.io sections (About, Status, FAQ, Contribute, Contact) into Hugo partials.
+            </p>
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,43 @@
+<section id="contribute">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Join us and contribute today!</h2>
+                <p class="lead">Become part of our open-source community and help shape the future of browsing.</p>
+            </div>
+
+            <div style="display:flex; gap: 10px; flex-wrap: wrap;">
+                <a class="btn primary" href="{{ .Site.Params.githubUrl | default "https://github.com/gosub-io/gosub-engine" }}" target="_blank" rel="noreferrer">Github</a>
+                <a class="btn" href="{{ .Site.Params.zulipUrl | default "https://chat.developer.gosub.io" }}" target="_blank" rel="noreferrer">Zulip</a>
+            </div>
+        </div>
+
+        <div class="card" style="border-radius: var(--r-lg);">
+            <p class="lead" style="margin-top: 0;">
+                We're building Gosub, an ambitious project aiming to create a fully functional browser. There is a lot to do, and we welcome any help! However, as a small team, we're still working on getting fully organized. While we love to have new contributors, we sometimes struggle to clearly define tasks that can be picked up by new contributors right away.
+            </p>
+            <p class="lead">
+                Our first priority is to create a clear path forward. This means focussing on essential organizational tasks that we currently lack the time or energy for. We need to establish roadmaps, properly structure our documentation for new developers and streamline the onboarding process to avoid slowing down development.
+            </p>
+            <p class="lead">
+                In essence, we need to strike a balance between a structured organization and weekend-long hackaton. The more people who get involved, the easier it will be to create that structure.
+            </p>
+
+            <div style="height: 8px"></div>
+            <div class="pill"><b>For now, our roadmap includes:</b></div>
+            <ul style="margin: 10px 0 0; padding-left: 18px; color: var(--muted);">
+                <li>Documenting how to compile and run the current Gosub components.</li>
+                <li>Reviewing and updating existing documentation to ensure it's accurate and complete.</li>
+                <li>Discussing the way forward by setting up a clear roadmap and outlining coding styles and workflows we want to follow.</li>
+            </ul>
+
+            <p class="lead" style="margin-top: 12px;">
+                Don't let this process discourage you! Even if you don't jump straight into coding like you may be able to in more mature projects, there are plenty of areas where your input will be valuable. We look forward to your contributions.
+            </p>
+
+            <p class="lead">
+                Even if you do not (want to) contribute, you are always welcome to join us in the developer Zulip chat at {{ .Site.Params.zulipUrl | default "https://chat.developer.gosub.io" }} where you will find the developers talking about all things Gosub (and more).
+            </p>
+        </div>
+    </div>
+</section>
